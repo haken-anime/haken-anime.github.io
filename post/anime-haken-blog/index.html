@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<meta property="og:url" content="http://haken-anime.github.io/">
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="アニメ覇権会議のブログです &middot; アニメ覇権会議">
+
+<meta property="og:site_name" content="アニメ覇権会議">
+
+<title>
+    
+    アニメ覇権会議のブログです
+    
+</title>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/github.min.css">
+<link rel="stylesheet" href="http://haken-anime.github.io//css/styles.css">
+<link rel="stylesheet" href="http://haken-anime.github.io//css/custom.css">
+
+
+<link rel="shortcut icon" href="http://haken-anime.github.io//assets/favicon.ico">
+
+
+<link rel="alternate" type="application/rss+xml" title="RSS" href="http://haken-anime.github.io//index.xml">
+
+
+<div class="container">
+    <header class="nav">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="http://haken-anime.github.io/">アニメ覇権会議</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="http://haken-anime.github.io//post">All Posts</a></li>
+                        
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                        
+                        
+                        <li>
+                            <a href="https://github.com/haken-anime" target="_blank">
+                                <i class="fa fa-github-square"></i>
+                                GitHub
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+<div class="row">
+    <div class="col-md-8">
+        <article class="post">
+
+            <header>
+                <div class="post-date">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    <time datetime="Thu Mar 12, 2015">
+                        Thu Mar 12, 2015
+                    </time>
+                </div>
+                <h1 class="post-title">
+                    <a href="http://haken-anime.github.io/post/anime-haken-blog/">アニメ覇権会議のブログです</a>
+                </h1>
+            </header>
+
+            <div class="post-content">
+                
+
+<h2 id="最初の投稿:3973dd5c12538fe478e7e4fde8dd4dc1">最初の投稿</h2>
+
+<p>こんにちは。shiworkです。</p>
+
+<p>アニメ雑談グループのblog作ってみました。</p>
+
+<p>アニメの雑談グループ内で色々調べた内容をどっかに残しとかないとなーという話題が出まして、いろいろ検討した結果本blogとなります。</p>
+
+<p>ドメインとか変わるかもしれないですが、のんびり続けていこうかと思います。</p>
+
+<h2 id="投稿までの流れ:3973dd5c12538fe478e7e4fde8dd4dc1">投稿までの流れ</h2>
+
+<p>一応、このブログについてです。</p>
+
+<p>このブログはHUGO、bitbucket、wercker、github pagesを利用して構築してます。</p>
+
+<ul>
+<li>bitbucketのprivate repositoryにてhugoのprojectと記事の管理</li>
+<li>bitbucketのmasterにコミットされるとwerckerによって記事をビルド</li>
+<li>werckerがbuild結果をgithubにコミット！</li>
+<li>github pagesにて本blogが公開</li>
+</ul>
+
+<p>という感じです。</p>
+
+<p>これだけだとめっちゃ簡単そうなんですが幾つかハマリポイントが合ったので続けて書いていこうかと思います。</p>
+
+<h3 id="hugoは早いが:3973dd5c12538fe478e7e4fde8dd4dc1">Hugoは早いが</h3>
+
+<p>Hugoでデザインを選ぶにあたって、公式の手順でテーマをcheckoutしたらほとんどそのままじゃ動かない。
+動かすにはエラーメッセージなんかを参考に弄ってやる必要があるんですが、面倒だったので動作したテーマから選びました。</p>
+
+<p><a href="https://github.com/dim0627/hugo_theme_beg">beg</a>というテーマです。Hugo自体は期待通り動き始めたら多分とてもいいツールだと感じてます。
+ドキュメントもそれなりに揃ってます。が、hatenaなら登録するだけで良かったなぁとか思うのでやっぱ辛い。blogは自分で運用するものじゃないと感じました。</p>
+
+<h3 id="ci便利ですね:3973dd5c12538fe478e7e4fde8dd4dc1">CI便利ですね。</h3>
+
+<p>なんとか無事にコレが公開されてるということは上手いこといけたんだとおもいます。werckerは今のところは無料で利用できるCIツールでとてもお世話になってます。で、そこでハマった内容。</p>
+
+<p>haken-anime.github.ioで公開する為にgh-pagesじゃなくてmaster branchにpushする必要があったんですが、werckerのgh-pagesのタスクがどうしてもgh-pages branchにpushするせいでなかなか構築が終わりませんでした。</p>
+
+<p>結果的にgit-pushというタスクがいい感じにgh-pagesから改良されてたので利用させてもらってます。</p>
+
+<h2 id="アニメの話:3973dd5c12538fe478e7e4fde8dd4dc1">アニメの話</h2>
+
+<p>まー、そんな技術的なあれこれは置いといて、SHIROBAKO最高ですね!
+いまはディーゼルさんが熱いですね。絵麻ちゃんも2クール突入してから母性溢れててたまりません！完全に絵麻ちゃんを久乃木ちゃんに取られてる感じのみゃーもりがんばれ！</p>
+
+<h2 id="まとめ:3973dd5c12538fe478e7e4fde8dd4dc1">まとめ</h2>
+
+<p>眠い</p>
+
+            </div>
+
+            <aside>
+                
+                <ul class="list-inline post-tags">
+                    
+                </ul>
+
+                
+                
+                <h3>Related Post</h3>
+                <ul class="post-rels">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+            </aside>
+            
+            
+            <footer>
+
+                <nav>
+                    <ul class="pager">
+
+                        
+                        <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+                        
+
+                        <li><a href="http://haken-anime.github.io//post">All Posts</a></li>
+
+                        
+                        <li class="next disabled"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                        
+
+                    </ul>
+                </nav>
+
+                
+            </footer>
+
+        </article>
+    </div>
+    <div class="col-md-4">
+        
+<aside>
+    <div class="row">
+
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Recent Posts</h2>
+                </div>
+                <div class="list-group">
+                    
+                    <a href="/post/anime-haken-blog/" class="list-group-item">アニメ覇権会議のブログです</a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-4 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="panel-title">Tags</h2>
+                </div>
+                <div class="list-group">
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>
+
+    </div>
+</div>
+
+</div>
+<hr>
+
+<footer class="container copy">
+    <p>&copy; 2015  アニメ覇権会議の皆さん </p>
+	<p>Powered by <a href="http://gohugo.io" target="_blank">Hugo</a></p>
+	<p>Theme <a href="https://github.com/dim0627/hugo_theme_hugostrap" target="_blank">Hugostrap</a> designed by <a href="http://yet.unresolved.xyz" target="_blank">Daisuke Tsuji</a>, Inspired from <a href="https://github.com/kAworu/octostrap3" target="_blank">Octostrap3</a></p>
+</footer>
+
+<script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<script>
+document.write('<script src="//sharebutton.net/plugin/sharebutton.php?type=horizontal&u=' + encodeURIComponent(document.location.href) + '"></scr' + 'ipt>');
+</script>
+
